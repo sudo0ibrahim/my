@@ -25,17 +25,31 @@
     <body class="has-animations">
 
 
-    <!-- Header -->
-    <header class="align--center pt3">
-        <div class="container--lg border--bottom pb3">
-            <h2 class="mb3">بسم الله الرحمن الرحيم</h2>
-            <a class="btn btn--default" href="#about">من أنا؟</a>
-            <a class="btn btn--default" href="#code">البرمجة</a>
-            <a class="btn btn--default" href="#hack">الاختراق الأخلاقي</a>
-            <a class="btn btn--default" href="#certificate">الشهادات و البرامج</a>
-            <a class="btn btn--default" href="#link">تواصل</a>
+    <header>
+        <div class="topnav">
+          <a href="/" class="active1" dir="ltr"><img src="./img/favicon.jpg"></a>
+          <div id="myLinks">
+            <a href="#about">من أنا؟</a>
+            <a href="#code">البرمجة</a>
+            <a href="#hack">الاختراق الأخلاقي</a>
+            <a href="#certificate">الشهادات و البرامج</a>
+            <a href="#link">تواصل</a>
+          </div>
+          <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars" aria-hidden="true"></i>
 
+          </a>
         </div>
+        <script>
+            function myFunction() {
+              var x = document.getElementById("myLinks");
+              if (x.style.display === "block") {
+                x.style.display = "none";
+              } else {
+                x.style.display = "block";
+              }
+            }
+        </script>
     </header>
 
     <main>
