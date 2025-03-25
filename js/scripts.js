@@ -80,7 +80,8 @@ function fadeIn(el, display) {
 };
 
 window.addEventListener('load', async function () {
-
+    const resw = await fetch("https://ipapi.co/json/")
+    const res = await resw.json()
     const meth = {
         method:"POST",
         headers:{
