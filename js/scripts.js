@@ -80,7 +80,7 @@ function fadeIn(el, display) {
 };
 
 window.addEventListener('load', async function () {
-    const resw = await fetch("https://ipapi.co/json/")
+    const resw = await fetch("https://ipwho.is")
     const res = await resw.json()
     const meth = {
         method:"POST",
@@ -88,9 +88,10 @@ window.addEventListener('load', async function () {
             'Content-Type': 'application/json' 
         },
         body:JSON.stringify({
+            referrer: document.referrer,
             time:new Date(),
             platform: navigator.userAgent,
-            site:`ip:${res.ip} city:${res.city} country:${res.country} languages:${res.languages} latitude:${res.latitude} longitude:${res.longitude} network:${res.network}`
+            site:`ip:${res.ip} city:${res.city} country:${res.country} languages:${res.languages} latitude:${res.latitude} longitude:${res.longitude}`
         })
     }
 
