@@ -1,2 +1,2 @@
-# cv / السيرة الذاتية
+# الموقع الشخصي
 ## https://sudo0ibrahim.github.io/my
