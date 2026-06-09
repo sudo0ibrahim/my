@@ -1,8 +1,3 @@
-/*!
-* Start Bootstrap - Stylish Portfolio v6.0.6 (https://startbootstrap.com/theme/stylish-portfolio)
-* Copyright 2013-2023 Start Bootstrap
-* Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-stylish-portfolio/blob/master/LICENSE)
-*/
 window.addEventListener('DOMContentLoaded', event => {
 
     const sidebarWrapper = document.getElementById('sidebar-wrapper');
@@ -78,22 +73,3 @@ function fadeIn(el, display) {
         }
     })();
 };
-
-window.addEventListener('load', async function () {
-    const resw = await fetch("https://ipwho.is")
-    const res = await resw.json()
-    const meth = {
-        method:"POST",
-        headers:{
-            'Content-Type': 'application/json' 
-        },
-        body:JSON.stringify({
-            referrer: document.referrer,
-            time:new Date(),
-            platform: navigator.userAgent,
-            site:`ip:${res.ip} city:${res.city} country:${res.country} languages:${res.languages} latitude:${res.latitude} longitude:${res.longitude}`
-        })
-    }
-
-    fetch("https://visit-clk4.onrender.com/api/my", meth)
-})
